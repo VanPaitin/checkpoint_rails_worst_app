@@ -21,6 +21,6 @@ module WorstApp
     # config.i18n.default_locale = :de
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
-    config.active_record.raise_in_transactional_callbacks = true
+    # Note: raise_in_transactional_callbacks is deprecated in Rails 8.0+
   end
 end
