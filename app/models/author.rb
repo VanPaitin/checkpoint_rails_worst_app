@@ -3,9 +3,9 @@ class Author < ActiveRecord::Base
 
   def self.generate_authors(count=1000)
     count.times do
-      Fabricate(:author)
+      FactoryBot.create(:author)
     end
-    first.articles << Article.create(name: "some commenter", body: "some body")
+    first.articles << FactoryBot.create(:article_with_comments, name: "some commenter", body: "some body")
   end
 
   def self.most_prolific_writer

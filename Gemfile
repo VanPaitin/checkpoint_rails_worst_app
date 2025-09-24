@@ -12,7 +12,7 @@ group :development, :test do
   gem 'pry'
   gem 'web-console', '~> 2.0'
   gem 'spring'
-  gem 'fabrication'
+  gem 'factory_bot_rails'
   gem 'faker'
   gem 'rspec-rails', '~> 3.3.3'
   gem 'bullet'
