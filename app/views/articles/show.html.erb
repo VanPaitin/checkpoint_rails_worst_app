@@ -1,0 +1,18 @@
+<h1>Terrible article show page</h1>
+<h1><%= @article.name %></h1>
+
+<p> Article body: <%= @article.body %></p>
+
+<h2>Comments section</h2>
+<ul>
+  <% if @article.comments.empty? %>
+    <li>No comments yet. Be the first to comment!</li>
+  <% else %>
+    <% @article.comments.each do |com| %>
+       <li> <%= com.body.html_safe %></li>
+      <% end %>
+  <% end %>
+</ul>
+
+
+<%= link_to "New Comment", new_article_comment_path(@article) %>
